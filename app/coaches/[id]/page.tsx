@@ -52,7 +52,7 @@ export default function Page({ params }: { params: { id: string } }) {
         <div className="flex gap-4 mt-5 items-center">
           <Link href={"/coaches"}>
             <Image
-              src={"/assets/icon/UserArrow.svg"}
+              src={"/assets/icon/UserArrows.png"}
               alt=""
               width={8}
               height={10}

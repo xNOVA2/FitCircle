@@ -49,7 +49,7 @@ useEffect(() => {
       <div className="flex justify-start gap-3 mt-5">
         <button className="flex items-center px-7 bg-DarkLight py-2 gap-2 rounded-lg text-TextColor3 ">
           <Image
-            src={"/assets/Icon/filter.svg"}
+            src={"/assets/Icon/Filter.png"}
             alt="Filter Icon"
             width={14}
             height={10}
