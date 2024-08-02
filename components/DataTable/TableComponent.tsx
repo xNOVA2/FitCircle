@@ -154,7 +154,9 @@ export default function TableComponent({
                   <div className="absolute top-3 right-10 ">
                     <AlertDialog>
                       <AlertDialogTrigger asChild>
-                        <button className="inline bg-DarkLight py-3 px-10 rounded-lg">
+                        <button
+                          className="inline bg-DarkLight py-3 px-10 rounded-lg"
+                        >
                           Delete
                         </button>
                       </AlertDialogTrigger>

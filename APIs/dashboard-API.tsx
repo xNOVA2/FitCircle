@@ -308,7 +308,7 @@ export const DeleteSignleSubAdmin: MutationFunction<
   { token: string; id: string }
 > = async ({ token, id }: { token: string; id: string }) => {
   try {
-    const url = `${BaseURL}/user/remove/${id}`;
+    const url = `${BaseURL}/user/remove-sub-admin/${id}`;
 
     const response = await axios.delete(url, { headers: { accessToken: token } });
 

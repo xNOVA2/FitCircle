@@ -133,6 +133,8 @@ export default function Post_Community({
                         className="text-gray-500"
                         src="/assets/icons/upload.svg"
                         alt=""
+                        width={100}
+                        height={100}
                       />
                       <p className="text-gray-500 text-center">upload</p>
                     </div>
@@ -154,6 +156,8 @@ export default function Post_Community({
                       <Image
                         src={imagePreview}
                         alt="Preview"
+                        width={"100"}
+                        height={"100"}
                         style={{
                           width: "100%",
                           height: "100%",

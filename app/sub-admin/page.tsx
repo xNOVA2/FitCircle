@@ -15,6 +15,7 @@ import { Loader, SearchBarPlaceHolder } from "@/components/Loading";
 import TableComponent from "@/components/DataTable/TableComponent";
 import { TableHeadingSubAdmin } from "@/types/data";
 import { Suspense, useEffect } from "react";
+import { generateCSV } from "@/lib/utils";
 
 export default function SubAdminPage() {
   // const router = useRouter();
@@ -87,7 +88,7 @@ export default function SubAdminPage() {
                   </AlertDialogContent>
                 </AlertDialog>
 
-                <Button className="text-sm flex items-center px-5 bg-DarkLight gap-2 rounded-lg text-TextColor3">
+                <Button onClick={() => generateCSV(data?.data?.users, "subAdmins")} className="text-sm flex items-center px-5 bg-DarkLight gap-2 rounded-lg text-TextColor3">
                   <Image
                     src={"/assets/Icon/Csv.png"}
                     alt="Filter Icon"

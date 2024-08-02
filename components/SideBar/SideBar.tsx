@@ -76,7 +76,7 @@ export default function SideBar({
       <div className=" overflow-x-hidden overflow-y-auto ">
         {/* Your main content goes here */}
         
-        <div className="flex-1 overflow-x-hidden overflow-y-auto ml-64 bg-backGroundColor ">
+        <div className="flex-1 overflow-x-hidden overflow-y-auto ml-64 h-full">
             {children}
         </div>
       </div>
