@@ -15,6 +15,7 @@ import { Loader, SearchBarPlaceHolder } from "@/components/Loading";
 import TableComponent from "@/components/DataTable/TableComponent";
 import { TableHeading } from "@/types/data";
 import { useEffect } from "react";
+import { generateCSV } from "@/lib/utils";
 
 export default function Coaches() {
 
@@ -58,7 +59,7 @@ useEffect(() => {
  
   return (
     <DashboardLayout Active={3}>
-      <section className="h-screen w-full bg-black bg-opacity-85 p-14 ">
+      <section className="h-full w-full bg-black bg-opacity-85 p-14 ">
         <h1 className="text-3xl font-bold text-TextColor3">Coaches </h1>
         <div className="flex flex-col justify-between h-full">
           <div>
@@ -88,7 +89,7 @@ useEffect(() => {
                   </AlertDialogContent>
                 </AlertDialog>
 
-                <Button className="text-sm flex items-center px-5 bg-DarkLight gap-2 rounded-lg text-TextColor3">
+                <Button onClick={() => generateCSV(data?.data?.users, "coaches")} className="text-sm flex items-center px-5 bg-DarkLight gap-2 rounded-lg text-TextColor3">
                   <Image
                     src={"/assets/Icon/Csv.png"}
                     alt="Filter Icon"

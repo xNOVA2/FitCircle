@@ -68,20 +68,25 @@ export default function Delete({
 
       <AlertDialogDescription className="relative">
         <hr className="border-TextColor3" />
-        <div className="flex justify-around items-center  pt-1 ">
+        <div className="flex justify-around items-center h-full w-full mt-[-1px]">
+
+
           <AlertDialogCancel
             asChild
-            className="w-5 bg-inherit border-0 text-red-600 hover:bg-inherit hover:text-red-600 cursor-pointer"
+            className="bg-inherit border-0 text-red-600 hover:bg-inherit hover:text-red-600 cursor-pointer w-full h-full rounded-none border-r-2 border-TextColor3"
             ref={CloseButtonRef}
           >
             <p className="">No</p>
           </AlertDialogCancel>
+
+
+
           <AlertDialog open={hasError}>
             <div
-              className="w-5 bg-inherit border-0 cursor-pointer "
+              className="bg-inherit border-0 cursor-pointer w-full h-full"
               onClick={HandleDelete}
             >
-              <AlertDialogTrigger asChild>
+              <AlertDialogTrigger asChild className="h-full w-full items-center justify-center flex">
                 <p className="text-LinksColor font-bold">Yes</p>
               </AlertDialogTrigger>
               <Done
@@ -90,12 +95,14 @@ export default function Delete({
               />
             </div>
           </AlertDialog>
+
+
         </div>
 
-        <div className="absolute top-0 left-36 border-l-2 h-full border-TextColor3">
+        {/* <div className="absolute top-0 left-36 border-l-2 h-full border-TextColor3">
           {" "}
           .
-        </div>
+        </div> */}
       </AlertDialogDescription>
     </>
   );
