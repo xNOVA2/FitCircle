@@ -159,7 +159,7 @@ export default function page() {
   return (
     <>
       <DashboardLayout Active={7}>
-        <div className="flex-grow flex flex-col border-1 bg-backColor text-white  p-5 h-screen">
+        <div className="flex-grow flex flex-col border-1 bg-backColor text-white  p-5 h-full">
         <h1 className="font-bold text-4xl mb-2 p-5">Support</h1>
 
           <div className="flex-grow flex ">
