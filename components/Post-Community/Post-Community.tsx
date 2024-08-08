@@ -75,9 +75,9 @@ export default function Post_Community({
       if (values.topic.length < 5) {
         errors.topic = "Topic Should have 5 Charactors ";
       }
-      if (imagePreview === null) {
-        errors.topic = "Picture Required";
-      }
+      // if (imagePreview === null) {
+      //   errors.topic = "Picture Required";
+      // }
       return errors;
     },
     validateOnMount: true,
@@ -104,6 +104,9 @@ export default function Post_Community({
         setImagePreview(reader.result as string);
       };
       reader.readAsDataURL(file);
+
+      console.log("🚀 ~ handleImageChange ~ AddPostIk.values.topic:", AddPostIk.values.topic)
+      // AddPostIk.validateForm({topic: AddPostIk.values.topic})
     } else {
       setImagePreview(null);
     }
@@ -131,7 +134,7 @@ export default function Post_Community({
           Active={5}
           isCommunitySaveButton
           onSaveFunction={AddPostIk.handleSubmit}
-          buttonDisable={AddPostIk.errors.topic ? true : false}
+          buttonDisable={AddPostIk.errors.topic || !imagePreview ? true : false}
         >
           <div className="bg-backColor h-screen">
             <div className="mx-5">
@@ -219,7 +222,7 @@ export default function Post_Community({
                 </div>
               </form>
               <p className="text-red-500  text-sm font-semibold mt-2 ">
-                {AddPostIk.errors.topic ? AddPostIk.errors.topic : null}
+                {AddPostIk.errors.topic ? AddPostIk.errors.topic :!imagePreview?"Picture Required": null}
               </p>
             </div>
           </div>
